@@ -18,6 +18,8 @@ var message, messageimg ,messsages,football,footballimg,
 Abwelcome, frog,frogimg,fruit,fruitimg,instrustion,instrustionimg,rules,rulesimg, hello,helloimg;
 var cross,crossimg,amongus, amoungusimg,carR,carRimg,pacman,pacmanimg,bg1r,bgimg;
 var pony,ponyImg, bunny,bunnyimg;
+var cloud,cloudimg;
+var score=0;
 
 
 var state = 1;
@@ -86,6 +88,7 @@ function preload() {
 	bgimg=loadImage("./img/b1!.jpg");
 	ponyImg=loadImage("./i/pony.jpg");
     bunnyimg=loadImage("./ig/bunnyland.jpg");
+	cloudimg=loadImage("./i/cloud2.png");
 }
 
 function setup() {
@@ -206,6 +209,13 @@ function draw() {
 	textFont("algerian");
     fill("Red")
 	text("S's SPACE CITY",300,100);
+
+	textSize(100);
+	textFont("algerian");
+	stroke("white");
+	fill("black");
+	text("Score : "+score,100,800);
+
 	
 	if(mousePressedOver(instrustion)){
 		rules.visible=true;
@@ -315,6 +325,16 @@ function draw() {
 		thought.sacle = 0.8;
 		thought.lifetime=100;	
 
+		// textSize(100);
+		// textFont("algerian");
+		// fill("Red")
+		// text("click on the back button on browser to go",100,100);
+		// text( "back on main page after playing each game",100,120);
+		cloud= createSprite(130,100,1,1)
+        cloud.addImage(cloudimg);
+		cloud.scale=0.8;
+	
+
 
 	}
 
@@ -373,18 +393,8 @@ function draw() {
 
 
 	}
-
-	if(mousePressedOver(reset)){
-		
-		textSize(30);
-		textFont("algerian");
-		fill("black")
-      text("press on the back button on browser to play other game",200,150)
-
-		
-	}
+  
 	
-
     if(mousePressedOver(shop9)){
         shop1.visible=false;
 		let a;
@@ -397,8 +407,9 @@ function draw() {
 		a.position(1150,430)
 		ABwelcome.addImage(message);
 		ABwelcome.lifetime=200;
-		
+		score=+100;
 
+		
 	}
 
 	if(mousePressedOver(shop2)){
@@ -459,20 +470,71 @@ function draw() {
 		pony.scale=0.3	;
 		pony.lifetime=200;
 	}
-     
-	// if(mousePressedOver(shop9)){
-    //     shop9.visible=false;
-	// 	// fruit.visible=false;
-    
-	// 	let a;
 
-	// 	frog=createSprite(1100, 330,20,20);
-	// 	a=createA('https://snigdhaarya.github.io/candyRun/', "cut the rope");
-	// 	a.position(1150, 430)
-	// 	frog.addImage(frogimg);
-	// 	frog.scale=0.4	;
-	// 	frog.lifetime=200;
+	// if(mousePressedOver(shop12)){
+       
+	// 	// fruit.visible=false;
+	// 	 	textSize(30);
+	// 		textFont("algerian");
+	// 	 	fill("black")
+	// 	 text("opps! you lost 10 coin",400,150)
+	
+		
 	// }
+
+	if(mousePressedOver(shop1)){
+       
+		// fruit.visible=false;
+		 	textSize(30);
+			textFont("algerian");
+		 	fill("black")
+		 text("opps! you lost 10 coin",400,150)
+	
+		
+	}
+
+	if(mousePressedOver(shop4)){
+   
+		// fruit.visible=false;
+		 	textSize(30);
+			textFont("algerian");
+		 	fill("black")
+		 text("opps! you lost 10 coin",400,150)
+	
+		
+	}
+	if(mousePressedOver(shop6)){
+      
+		// fruit.visible=false;
+		 	textSize(30);
+			textFont("algerian");
+		 	fill("black")
+		 text("opps! you lost 10 coin",400,150)
+	
+		
+	}
+
+	if(mousePressedOver(shop8)){
+       
+		// fruit.visible=false;
+		 	textSize(30);
+			textFont("algerian");
+		 	fill("black")
+		 text("opps! you lost 10 coin",400,150)
+	
+		
+	}
+
+	if(mousePressedOver(shop10)){
+       
+		// fruit.visible=false;
+		 	textSize(30);
+			textFont("algerian");
+		 	fill("black")
+		 text("opps! you lost 10 coin",400,150)
+	
+		
+	}
 
 	if(mousePressedOver(shop5)){
         shop5.visible=false;
